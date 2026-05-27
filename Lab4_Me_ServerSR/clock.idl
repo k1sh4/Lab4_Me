@@ -1,0 +1,20 @@
+﻿[
+    uuid(f59c1760-85da-4e2e-a662-1cbdefe3841b),
+    version(1.0)
+]
+interface clock
+{
+    const short BUFSIZE = 256;
+
+    // Функція для отримання часу
+    void GetTime(
+        [in] handle_t hBinding,
+        [out, string] char time_str[BUFSIZE]
+    );
+
+    // Функція для отримання дати
+    void GetDate(
+        [in] handle_t hBinding,
+        [out, string] char date_str[BUFSIZE]
+    );
+}
